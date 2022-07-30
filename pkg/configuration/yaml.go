@@ -8,7 +8,7 @@ import (
 
 type Configuration struct {
 	Storage struct {
-		AWS struct {
+		S3 struct {
 			Bucket string
 			Prefix string
 			Region string

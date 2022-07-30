@@ -52,13 +52,13 @@ func main() {
 	}
 
 	var storage store.Storage
-	if config.Storage.AWS.Prefix != "" {
+	if config.Storage.S3.Prefix != "" {
 		storage = store.NewS3Storage(store.S3StorageOptions{
 			AccessKeyId:     "",
 			SecretAccessKey: "",
-			Region:          config.Storage.AWS.Region,
-			Bucket:          config.Storage.AWS.Bucket, // TODO get default from ~/.storenv
-			Prefix:          config.Storage.AWS.Prefix,
+			Region:          config.Storage.S3.Region,
+			Bucket:          config.Storage.S3.Bucket, // TODO get default from ~/.storenv
+			Prefix:          config.Storage.S3.Prefix,
 		})
 		if err != nil {
 			panic(fmt.Errorf("failed to initialize s3 storage: %v", err))
