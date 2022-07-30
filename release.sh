@@ -1,4 +1,4 @@
-GOOS=linux GOARCH=amd64 go build -o build/linux/amd64/storenv cmd/storenv.go && tar -cvf build/storenv-0.0.0-alpha-linux-x86_64.tar.gz ./build/linux/amd64/storenv
-GOOS=linux GOARCH=arm64 go build -o build/linux/arm64/storenv cmd/storenv.go && tar -cvf build/storenv-0.0.0-alpha-linux-aarch64.tar.gz ./build/linux/arm64/storenv
-GOOS=darwin GOARCH=amd64 go build -o build/darwin/amd64/storenv cmd/storenv.go && tar -cvf build/storenv-0.0.0-alpha-osx-x86_64.tar.gz ./build/darwin/amd64/storenv
-GOOS=darwin GOARCH=arm64 go build -o build/darwin/arm64/storenv cmd/storenv.go && tar -cvf build/storenv-0.0.0-alpha-osx-aarch64.tar.gz ./build/darwin/arm64/storenv
+GOOS=linux GOARCH=amd64 go build -o build/linux/amd64/storenv cmd/storenv.go && cd ./build/linux/amd64 && tar -cvf ../../storenv-0.0.0-alpha-linux-x86_64.tar.gz storenv && cd ../../..
+GOOS=linux GOARCH=arm64 go build -o build/linux/arm64/storenv cmd/storenv.go && cd ./build/linux/arm64 && tar -cvf ../../storenv-0.0.0-alpha-linux-aarch64.tar.gz storenv && cd ../../..
+GOOS=darwin GOARCH=amd64 go build -o build/darwin/amd64/storenv cmd/storenv.go && cd ./build/darwin/amd64 && tar -cvf ../../storenv-0.0.0-alpha-osx-x86_64.tar.gz storenv && cd ../../..
+GOOS=darwin GOARCH=arm64 go build -o build/darwin/arm64/storenv cmd/storenv.go && cd ./build/darwin/arm64 && tar -cvf ../../storenv-0.0.0-alpha-osx-aarch64.tar.gz storenv && cd ../../..
