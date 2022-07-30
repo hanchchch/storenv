@@ -1,0 +1,9 @@
+storage:
+  aws:
+    bucket: my-credentials
+    prefix: storenv
+    region: ap-northeast-2
+
+secrets:
+  - .env
+  - secrets.txt
